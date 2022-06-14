@@ -1,0 +1,26 @@
+summary: Test for bz475190 (sos modifes ldap.conf)
+description: |+
+    Bug summary: sos modifes ldap.conf
+    Bugzilla link: https://bugzilla.redhat.com/show_bug.cgi?id=475190
+contact: Miroslav Hradilek <mhradile@redhat.com>
+component:
+  - sos
+test: ./runtest.sh
+framework: beakerlib
+require:
+  - library(sos/utils)
+recommend:
+  - sos
+duration: 10m
+enabled: true
+tag:
+  - Regression
+  - Tier2
+tier: '2'
+link:
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=475190
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=444714
+  - relates: https://bugzilla.redhat.com/show_bug.cgi?id=689387
+extra-nitrate: TC#0010852
+extra-summary: /CoreOS/sos/Regression/bz475190-sos-modifes-ldap-conf
+extra-task: /CoreOS/sos/Regression/bz475190-sos-modifes-ldap-conf
