@@ -1,0 +1,24 @@
+---
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: master # or specific git tag
+    hooks:
+      - id: shellcheck
+
+  - repo: local
+    hooks:
+      - id: tmt-lint
+        name: tmt-lint
+        entry: .pre-commit/custom-hooks/tmt-lint
+        language: script
+        pass_filenames: true
