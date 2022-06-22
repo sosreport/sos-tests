@@ -25,7 +25,7 @@ rlPhaseStartSetup
     rlFileBackup /etc/ldap.conf
     rlRun "rm -f /etc/ldap.conf" 0 "removing old ldap.conf"
     rlRun "cp ./ldap.conf ./ldap.slink" 0 "copying our ldap.conf to ldap.slink"
-    rlRun "ln -s `pwd`/ldap.slink /etc/ldap.conf" 0 "linking ldap.slink to /etc/ldap.conf"
+    rlRun "ln -s $(pwd)/ldap.slink /etc/ldap.conf" 0 "linking ldap.slink to /etc/ldap.conf"
 rlPhaseEnd
 
 rlPhaseStartTest
